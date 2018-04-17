@@ -1,0 +1,13 @@
+<h1>Authors Of The Age</h1>
+
+<% @authors.each do |author| %>
+  <h3><%= author.name %></h3>
+  <p>List of books:</p>
+  <ul>
+    <% author.books.each do |book| %>
+      <li><%= link_to book.title, book_path(book) %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to "Home", home_path %>

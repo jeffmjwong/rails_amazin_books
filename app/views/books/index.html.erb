@@ -1,0 +1,12 @@
+<h1>Books In Da Store</h1>
+
+<% @books.each do |book| %>
+  <p>
+    <%= link_to book.title, book_path(book) %>
+    (rates <%= book.rating %> out of 5)
+    is written by
+    <%= book.author.name %>
+  </p>
+<% end %>
+
+<%= link_to "Home", home_path %>
