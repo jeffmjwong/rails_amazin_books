@@ -1,2 +1,14 @@
-<h1>Stores#index</h1>
-<p>Find me in app/views/stores/index.html.erb</p>
+<h1>Stores Around Australia</h1>
+
+<p>
+  <ul>
+    <% @stores.each do |store| %>
+      <li>
+        <%= link_to store.title, store_path(store) %> |
+        <%= store.full_address %>
+      </li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to "Home", home_path %>
