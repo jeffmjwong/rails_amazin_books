@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417015832) do
+ActiveRecord::Schema.define(version: 20180417030846) do
 
   create_table "authors", force: :cascade do |t|
     t.string "img"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20180417015832) do
     t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
 end
