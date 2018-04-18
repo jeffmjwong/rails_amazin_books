@@ -31,17 +31,6 @@ ActiveRecord::Schema.define(version: 20180417033509) do
     t.index ["author_id"], name: "index_books_on_author_id"
   end
 
-  create_table "customers", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.string "city"
-    t.string "state"
-    t.string "postcode"
-    t.string "country"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "stores", force: :cascade do |t|
     t.string "title"
     t.string "address"
